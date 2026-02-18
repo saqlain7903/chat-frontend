@@ -1,0 +1,143 @@
+/* ============ CHAT WINDOW ============ */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #efeae2;
+  height: 100vh;
+}
+
+/* Mobile hide */
+.hide-mobile {
+  display: none;
+}
+
+/* ============ HEADER ============ */
+.chat-header {
+  height: 60px;
+  background: #075e54;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  justify-content: space-between;
+}
+
+.chat-header h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.three {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+/* ============ MESSAGES AREA ============ */
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-image: url("https://i.imgur.com/7YbGZP5.png");
+}
+
+/* Scrollbar */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* ============ CHAT BUBBLES ============ */
+.chat-bubble {
+  max-width: 70%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 7px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Sent (You) */
+.chat-bubble.sent {
+  background: #dcf8c6;
+  margin-left: auto;
+  border-top-right-radius: 0;
+}
+
+/* Received */
+.chat-bubble.received {
+  background: #fff;
+  margin-right: auto;
+  border-top-left-radius: 0;
+}
+
+/* Text */
+.bubble-text b {
+  display: none; /* WhatsApp hides sender name */
+}
+
+/* Time */
+.bubble-time {
+  font-size: 11px;
+  color: #555;
+  text-align: right;
+  margin-top: 3px;
+}
+
+/* ============ INPUT BOX ============ */
+.chat-input-box {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f0f0f0;
+  gap: 10px;
+}
+
+.chat-input-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.sender-icon {
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+  color: #555;
+  cursor: pointer;
+}
+
+.chat-input-box button {
+  background: #075e54;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .chat-window {
+    width: 100%;
+  }
+}
